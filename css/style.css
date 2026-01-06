@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.calculator {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.display {
+    margin-bottom: 30px;
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 32px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    text-align: right;
+    background-color: #f5f5f5;
+    color: #333;
+    font-weight: bold;
+}
+
+#display:focus {
+    outline: none;
+    border-color: #667eea;
+    background-color: #fff;
+}
+
+.buttons {
+    display: grid;
+    gap: 10px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-operator {
+    background-color: #667eea;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-operator:hover {
+    background-color: #5568d3;
+}
+
+.btn-equals {
+    background-color: #48bb78;
+    color: white;
+    font-weight: bold;
+    grid-column: 2 / 4;
+}
+
+.btn-equals:hover {
+    background-color: #38a169;
+}
+
+.btn-clear {
+    background-color: #f56565;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-clear:hover {
+    background-color: #e53e3e;
+}
+
+.btn-delete {
+    background-color: #ed8936;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-delete:hover {
+    background-color: #dd6b20;
+}
+
+.btn-zero {
+    grid-column: 1 / 2;
+}
+
+/* Design responsive */
+@media (max-width: 480px) {
+    .calculator {
+        padding: 20px;
+    }
+
+    .btn {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    #display {
+        font-size: 24px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+}
